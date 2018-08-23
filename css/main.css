@@ -108,6 +108,58 @@ body
   text-decoration: none;
 }
 
+.falinks
+{
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+  width: initial;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.FAbuttons
+{
+  /* width: 50%;centers li within div along with margin: auto */
+  padding: 0px;
+  margin: auto;
+  list-style: none;/* makes bullet points disappear*/
+  /* color: #8a6d3b !important; */
+  /* font-size: 25px; */
+}
+
+.fa
+{
+  list-style: none;/* makes bullet points disappear*/
+  color: orange !important;
+  font-size: 35px !important;
+  padding: 20px;
+  width: 61.44px;
+  height: 64.5px;
+  padding-left: 17px; /*so envelope doesn't get cut off*/
+}
+
+
+.FAbuttons .inline /*makes li on same line as opposed to stacked*/
+{
+ width: 61.44px;
+ height: 64.5px;
+ float: left;
+}
+
+.FAbuttons > .inline > a > .fa:hover /*Makes fa icons on first page change color*/
+{
+  color: rgb(252, 255, 90) !important;
+}
+
+.inline a
+{
+  display: inline-block;
+  overflow: hidden;
+  width 20px;
+  line-height: 1em;
+}
+
+
 
 
 
