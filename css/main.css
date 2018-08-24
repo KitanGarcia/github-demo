@@ -1,10 +1,10 @@
- *
+*
 {
   outline: 1px solid red !important;
   box-sizing: border-box;
 } 
-
 *
+
 {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -18,6 +18,65 @@ body
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+}
+
+.container
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+  color: orange !important;
+  background-color: rgba(10, 10, 10, .3);
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+}
+
+.name
+{
+  display: flex;
+  flex: 4;
+  margin-top: -10px !important;/*!important forces style*/
+}
+
+.navlinks
+{
+  flex: 1;
+  margin-top: 8px;
+}
+
+.navlinks > a
+{
+  text-decoration: none;
+  color: orange;
+}
+
+
+@media all and (max-width: 600px)/*allows flex box to wrap and make each item 50% width*/
+{ 
+  .container
+  {
+    flex-wrap: wrap;
+  }
+  
+  .container > li
+  {
+    flex-basis: 50%;
+  }
+}
+
+@media all and (max-width: 400px)/*have navbar stack with small screens*/
+{
+  .container > li
+  {
+    flex-basis: 100%;
+  }
+  .putclasshere/*Puts class on the bottom when stacked FIX THIS WHEN POSSIBLE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+  {
+    order: 1;
+  }
 }
 
 .container-fluid
@@ -41,25 +100,6 @@ body
   align-items: center;
   text-align: center;
   color: white;
-}
-
-.name
-{
-  margin-top: -7px !important;/*!important forces style*/
-  margin-left: -27px !important;
-  float: left !important;
-  color: orange !important;
-}
-
-.topbar
-{ 
-  background-color: rgba(10, 10, 10, .3);/* dark, translucent nav bar*/
-  list-style-type: none;
-  overflow: hidden; 
-  position: fixed;
-  width: 100%;
-  opacity: 1;
-  z-index: 99; /*Makes navbar opaque*/
 }
 
 
