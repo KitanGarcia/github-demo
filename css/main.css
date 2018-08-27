@@ -12,12 +12,13 @@
   box-sizing: border-box;
 }
 
-body
+body, html
 {
-  background-image: url("/mnt/Windows8_OS/Projects/webdevworkshop/messing/images/background.JPG");
+  height: 100%;
+/*  background-image: url("/mnt/Windows8_OS/Projects/webdevworkshop/messing/images/background.JPG");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: fixed;*/
 }
 
 .container
@@ -83,10 +84,11 @@ body
 {
   position: fixed;/*container encompasses whole screen and everything can be centered*/
   display: flex;
-  padding: 0;
+  flex-direction: column;
+ /* padding: 0;
   margin: 0;
   top: 0;
-  left: 0;
+  left: 0;THESE DO NOT SEEM NECESSARY*/
   height: 100%;
   width: 100%;
   background-color: transparent;
@@ -95,12 +97,38 @@ body
 .intro 
 {
   display: flex;
-  flex: 5;
+  flex: 1;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: white;
+  height: 100vh !important;/*THIS SHOULD WORK*/
+  background-image: url("/mnt/Windows8_OS/Projects/webdevworkshop/messing/images/background.JPG");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
+
+.about 
+{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: black;
+  background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 .navbuttons
