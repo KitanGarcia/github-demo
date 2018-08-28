@@ -15,12 +15,10 @@
 body, html
 {
   height: 100%;
-/*  background-image: url("/mnt/Windows8_OS/Projects/webdevworkshop/messing/images/background.JPG");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;*/
 }
 
+
+/*GET RID OF FLEX 1 IN CONTAINER-FLUID*/
 .container
 {
   display: flex;
@@ -39,7 +37,7 @@ body, html
 {
   display: flex;
   flex: 4;
-  margin-top: -10px !important;/*!important forces style*/
+  margin-top: -10px !important;
 }
 
 .navlinks
@@ -83,8 +81,9 @@ body, html
 .container-fluid
 {
   position: fixed;/*container encompasses whole screen and everything can be centered*/
-  display: flex;
-  flex-direction: column;
+  overflow-y: scroll;
+ /* display: flex;
+  flex-direction: column;*/
  /* padding: 0;
   margin: 0;
   top: 0;
@@ -102,7 +101,7 @@ body, html
   align-items: center;
   text-align: center;
   color: white;
-  height: 100vh !important;/*THIS SHOULD WORK*/
+  height: 100%;
   background-image: url("/mnt/Windows8_OS/Projects/webdevworkshop/messing/images/background.JPG");
   background-size: cover;
   background-position: center;
@@ -115,6 +114,7 @@ body, html
   flex: 1;
   justify-content: center;
   align-items: center;
+  height: 100%;
   text-align: center;
   color: black;
   background-color: white;
