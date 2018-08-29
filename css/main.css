@@ -27,10 +27,32 @@ body, html
   list-style: none;
   text-align: center;
   color: orange !important;
-  background-color: rgba(10, 10, 10, .3);
+  background-color: transparent;
+ /* background-color: rgba(10, 10, 10, .3);*/
   position: fixed;
   width: 100%;
   z-index: 99;
+}
+
+.sidebar
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding-left: 1%;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  color: orange !important;
+  background-color: transparent;
+  position: fixed;
+  top: 25%;
+  bottom: 25%;
+  
+  width: 10%;
+  z-index: 99;
+    font-size: 35px;
 }
 
 .name
@@ -46,12 +68,53 @@ body, html
   margin-top: 8px;
 }
 
+.navlinks i
+{
+  width: 51px;
+}
+
+.navlinks > a > i
+{
+  display: inline-block;
+  box-shadow: inset 0px 0px 10px 3px #111;
+  border-radius: 30px;
+  padding: .2em .2em;
+}
+
 .navlinks > a
 {
   text-decoration: none;
   color: orange;
 }
 
+/*get rid of below*/
+.navlinks a{
+	border: 2px solid #909090;
+	border-radius: 100%;
+	margin-right: 7px; /*space between*/
+    display: flex;
+    align-items: flex-start;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+} 
+.navlinks a i{
+    align-self:center;
+	color: orange;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+}
+
+.navlinks a:hover{
+  background: rgb(252, 255, 90);
+ /* background: rgba(0,0,0,0.2);*/
+ /* color: rgb(252, 255, 90) !important;*/
+}
+
+.navlinks a:hover i{
+ /* color: rgb(252, 255, 90) !important;*/
+  color: #3A3A3A;
+}
+/*get rid of above*/
 
 @media all and (max-width: 600px)/*allows flex box to wrap and make each item 50% width*/
 { 
@@ -154,12 +217,13 @@ body, html
   text-decoration: none;
 }
 
+/*
 .active
 {
   background-color: orange;
   color: white;
   text-decoration: none;
-}
+}*/
 
 .navbuttons a:visited
 {
@@ -189,10 +253,10 @@ body, html
   justify-content: center;
   padding: 0px;
   list-style: none;/* makes bullet points disappear*/
-  font-size: 35px;
+  font-size: 235%;
 }
 
-.fa
+.fa, .fab
 {
   color: orange;
   padding: 20px;
