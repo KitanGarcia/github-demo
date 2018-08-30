@@ -14,7 +14,8 @@
 
 body, html
 {
-  height: 100%;
+  min-height: 100%;/*Was just height 100%, but changed to allow scrolling*/
+  height: auto;
 }
 
 
@@ -28,7 +29,7 @@ body, html
   text-align: center;
   color: orange !important;
   background-color: transparent;
- /* background-color: rgba(10, 10, 10, .3);*/
+ /* background-color: rgba(10, 10, 10, .3);delete this!*/
   position: fixed;
   width: 100%;
   z-index: 99;
@@ -100,14 +101,14 @@ body, html
 	margin-right: 7px; /*space between*/
     display: flex;
     align-items: flex-start;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
+    transition: all .75s;
+    -webkit-transition: all .75s;
 } 
 .navlinks a i{
     align-self:center;
 	color: orange;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
+    transition: all .75s;
+    -webkit-transition: all .75s;
 }
 
 .navlinks a:hover{
@@ -191,10 +192,17 @@ body, html
 
 #about
 {
+  transition: box-shadow 0.8s ease-in-out;
+  position: relative;
   background-image: url("../assets/about.JPG");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+}
+
+#about:hover
+{
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.4);
 }
 
 
