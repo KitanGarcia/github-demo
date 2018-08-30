@@ -47,36 +47,30 @@
    <nav>
      <ul class = "sidebar">
        <li class = "navlinks">
-         <a class = "active" href = "#about">
+         <a title = "home" class = "active" href = "#home"><!--Do I want to keep titles or no?-->
            <i class="fas fa-home"></i>
          </a>
        </li>
-
-
        <li class = "navlinks">
-         <a href = "#about">
+         <a title = "about" href = "#about">
            <i class="fas fa-portrait"></i>
          </a>
        </li>
-          
-
-
        <li class = "navlinks">
-         <a href = "#portfolio">
-           <i class="fas fa-folder-open"></i>
+         <a title = "interests" href = "#interests">
+           <i class="fas fa-theater-masks"></i>
          </a>
        </li>
-
        <li class = "navlinks">
-         <a href = "#interests">
-           <i class="fas fa-theater-masks"></i>
+         <a title = "portfolio" href = "#portfolio">
+           <i class="fas fa-folder-open"></i>
          </a>
        </li>
      </ul>
    </nav>
 
    <div class = "container-fluid">
-     <div class = "intro row">
+     <div id = "home" class = "row">
        <div class = "row">
          <h3>In progress</h3>
  <!--        <p>Insert short description (with typed.js) and FA. Resume, Github, LinkedIn, Email.</p>
@@ -110,12 +104,28 @@
          </ul>
        </div>
      </div>
-     <div class = "about row">
-       <p>Please work.</p>
+     <div id = "about" class = "row">
+       <p>About</p>
+     </div>
+     <div id = "interests" class = "row">
+       <p>Interests</p>
+     </div>
+     <div id = "portfolio" class = "row">
+       <p>Portfolio</p>
      </div>
    </div>
 
-
+    <script>/*FINISH THIS!*/
+      $('.sidebar > .navlinks > a > .fa-portrait').on("click", function(event) {
+      var target = $.(this.getAttribute('href'));
+      if (target.length) {
+        event.preventDefault();
+        $('html, body').stop()animate( {
+          scrollTop: target.offset().top
+        }, 1000);
+      }
+    }
+    </script>
   </body>
 </html>
 

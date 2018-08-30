@@ -47,12 +47,13 @@ body, html
   color: orange !important;
   background-color: transparent;
   position: fixed;
-  top: 25%;
+  top: 30%;
   bottom: 25%;
   
-  width: 10%;
+  width: 0;
+  height: 0;
   z-index: 99;
-    font-size: 35px;
+  font-size: 35px;
 }
 
 .name
@@ -71,6 +72,11 @@ body, html
 .navlinks i
 {
   width: 51px;
+}
+
+.navlinks a
+{
+  margin-right: 0px !important;
 }
 
 .navlinks > a > i
@@ -94,14 +100,14 @@ body, html
 	margin-right: 7px; /*space between*/
     display: flex;
     align-items: flex-start;
-    transition: all 0.4s;
-    -webkit-transition: all 0.4s;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
 } 
 .navlinks a i{
     align-self:center;
 	color: orange;
-    transition: all 0.4s;
-    -webkit-transition: all 0.4s;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
 }
 
 .navlinks a:hover{
@@ -156,7 +162,7 @@ body, html
   background-color: transparent;
 }
 
-.intro 
+#home 
 {
   display: flex;
   flex: 1;
@@ -165,13 +171,13 @@ body, html
   text-align: center;
   color: white;
   height: 100%;
-  background-image: url("/mnt/Windows8_OS/Projects/webdevworkshop/messing/images/background.JPG");
+  background-image: url("../assets/home.JPG");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
-.about 
+#about, #interests, #portfolio
 {
   display: flex;
   flex: 1;
@@ -181,6 +187,14 @@ body, html
   text-align: center;
   color: black;
   background-color: white;
+}
+
+#about
+{
+  background-image: url("../assets/about.JPG");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 
