@@ -1,2 +1,2 @@
-# RemodelingPersonalSite
-Here I will be remodeling and working with a new site with the goal of simplifying the code and using it as my personal site
+# github-demo
+I'm scratching everything I had here to convert it into a demo repo so I can show people how to use git/github
